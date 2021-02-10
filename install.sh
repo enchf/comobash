@@ -6,9 +6,10 @@ CMD="source $SCRIPT"
 GREP=$(fgrep "$CMD" $TARGET -x -n)
 
 if [[ -z $GREP ]]; then
+    echo "" >> $TARGET
     echo "# Comobash command line utils" >> $TARGET
     echo "export COMOBASH_TARGET=$TARGET" >> $TARGET
-    echo "export COMOBASH_SCRIPT"=$SCRIPT" >> $TARGET
+    echo "export COMOBASH_SCRIPT=$SCRIPT" >> $TARGET
     echo $CMD >> $TARGET
     echo "Installed in file $TARGET"
     source $TARGET
