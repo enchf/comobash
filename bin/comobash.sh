@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Ubuntu aliases
+alias appsearch="apt-cache search"
+
 # Git aliases
 alias glog="git log --all --graph --decorate --name-only"
 alias gs="git status"
@@ -34,6 +37,7 @@ function portpid() {
   netstat -vanp tcp | grep $1 | awk '{ print $9 }'
 }
 
+# Shell edit
 alias reloadsh='source $COMOBASH_TARGET'
 alias showsh='cat $COMOBASH_TARGET'
 alias editsh='nano $COMOBASH_SCRIPT'
